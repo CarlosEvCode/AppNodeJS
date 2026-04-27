@@ -41,7 +41,12 @@ const ROUTES = {
     title: 'Clientes',
     view: '/views/clientes.html',
     module: () => ClientesModule,
-  }
+  },
+  proveedores: {
+    title: 'Proveedores',
+    view: '/views/proveedores.html',
+    module: () => ProveedoresModule,
+  },
   // ── Ejemplo de cómo agregar una ruta nueva en el futuro ──
   // clientes: {
   //   title:  'Clientes',
