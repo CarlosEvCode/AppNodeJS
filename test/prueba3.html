@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .importante {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: red;
+      }
+
+      .titulo {
+        font-size: 24px;
+        color: blue;
+      }
+    </style>
+    <p id="contenido" class="titulo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nostrum
+      necessitatibus non quaerat officiis cumque provident quasi quod ea
+      molestiae pariatur temporibus impedit doloribus, odio corrupti at magni
+      eos libero.
+    </p>
+    <button type="button" id="agregar">Agregar clase</button>
+    <button type="button" id="quitar">Quitar clase</button>
+    <button type="button" id="verificar">Verificar clase</button>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const contenido = document.getElementById("contenido");
+        const btnAgregar = document.getElementById("agregar");
+        const btnQuitar = document.getElementById("quitar");
+        const btnVerificar = document.getElementById("verificar");
+
+        btnAgregar.addEventListener("click", () => {
+          contenido.classList.add("importante");
+        });
+
+        btnQuitar.addEventListener("click", () => {
+          contenido.classList.remove("importante");
+        });
+
+        btnVerificar.addEventListener("click", () => {
+          const tieneClase = contenido.classList.contains("importante");
+          console.log(tieneClase);
+        });
+      });
+    </script>
+  </body>
+</html>

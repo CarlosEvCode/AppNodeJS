@@ -11,7 +11,12 @@
 <div class="search-bar-row">
   <div class="search-input-wrap">
     <i class="bi bi-search search-icon"></i>
-    <input type="text" id="searchMarca" class="search-input" placeholder="Buscar marca…" />
+    <input
+      type="text"
+      id="searchMarca"
+      class="search-input"
+      placeholder="Buscar marca…"
+    />
   </div>
   <button class="btn-icon-outline" id="btnRefreshMarcas" title="Recargar">
     <i class="bi bi-arrow-clockwise"></i>
@@ -30,7 +35,11 @@
         </tr>
       </thead>
       <tbody id="bodyMarcas">
-        <tr><td colspan="4" class="text-center py-5"><div class="spinner-custom"></div></td></tr>
+        <tr>
+          <td colspan="4" class="text-center py-5">
+            <div class="spinner-custom"></div>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -47,21 +56,36 @@
         <div class="modal-title-custom" id="modalMarcaTitle">Nueva Marca</div>
         <div class="modal-subtitle">Ingresa el nombre de la marca</div>
       </div>
-      <button class="btn-modal-close" id="btnCloseModalMarca"><i class="bi bi-x-lg"></i></button>
+      <button class="btn-modal-close" id="btnCloseModalMarca">
+        <i class="bi bi-x-lg"></i>
+      </button>
     </div>
     <div class="modal-body-custom">
       <form id="formMarca" novalidate>
         <input type="hidden" id="marcaId" />
-        <label class="form-label-custom">Nombre de la Marca <span class="required">*</span></label>
-        <input type="text" id="mNombre" class="input-custom" placeholder="Ej: Samsung" maxlength="100" required />
+        <label class="form-label-custom"
+          >Nombre de la Marca <span class="required">*</span></label
+        >
+        <input
+          type="text"
+          id="mNombre"
+          class="input-custom"
+          placeholder="Ej: Samsung"
+          maxlength="100"
+          required
+        />
         <div class="field-error" id="err-mNombre"></div>
       </form>
     </div>
     <div class="modal-footer-custom">
       <button class="btn-cancel" id="btnCancelMarca">Cancelar</button>
-      <button class="btn-save"   id="btnSaveMarca">
-        <span id="btnSaveMarcaText"><i class="bi bi-check-lg me-1"></i> Guardar</span>
-        <span id="btnSaveMarcaSpinner" class="d-none"><div class="spinner-sm"></div></span>
+      <button class="btn-save" id="btnSaveMarca">
+        <span id="btnSaveMarcaText"
+          ><i class="bi bi-check-lg me-1"></i> Guardar</span
+        >
+        <span id="btnSaveMarcaSpinner" class="d-none"
+          ><div class="spinner-sm"></div
+        ></span>
       </button>
     </div>
   </div>
