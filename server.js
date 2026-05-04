@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //2. RUTAS (endpoints)
 app.use('/api/productos', require('./routes/productos'));
 app.use('/api/marcas', require('./routes/marcas'));
+app.use('/api/reportes', require('./routes/reportes')); //reportes/productos
 
 //3. Todo lo que no sea ruta => frontend (SPA)
 //Express v4: app.get('*', (req, res) => { ... });
@@ -48,6 +49,8 @@ app.listen(port, () => {
     console.log(`API productos en http://localhost:${port}/api/productos`);
     //API marcas
     console.log(`API marcas en http://localhost:${port}/api/marcas`);
+    //API reportes
+    console.log(`API reportes en http://localhost:${port}/api/reportes`);
 });
 
 module.exports = app;
